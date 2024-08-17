@@ -24,5 +24,6 @@
 **/package-lock.json
 **/node_modules/
 **/test-results/
-**/end2end/playwright-report/
-**/playwright/.cache/
+**/playwright-report/
+**/blob-report/
+**/.cache/

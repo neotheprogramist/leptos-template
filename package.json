@@ -1,0 +1,6 @@
+{
+  "name": "leptos-template",
+  "workspaces": [
+    "end2end"
+  ]
+}
