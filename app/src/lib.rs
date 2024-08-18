@@ -1,8 +1,8 @@
 use crate::error_template::{AppError, ErrorTemplate};
 
-use leptos::*;
-use leptos_meta::*;
-use leptos_router::*;
+use leptos::{component, create_signal, view, Errors, IntoView, SignalUpdate};
+use leptos_meta::{provide_meta_context, Stylesheet, Title};
+use leptos_router::{Route, Router, Routes};
 
 pub mod error_template;
 

@@ -1,7 +1,7 @@
-use app::*;
+use app::App;
 use axum::Router;
 use fileserv::file_and_error_handler;
-use leptos::*;
+use leptos::get_configuration;
 use leptos_axum::{generate_route_list, LeptosRoutes};
 
 pub mod fileserv;
