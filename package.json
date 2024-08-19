@@ -4,6 +4,10 @@
     "end2end"
   ],
   "scripts": {
-    "prettier:check": "npx prettier --check '**/*.{js,jsx,ts,tsx,json,css,scss,yaml,md}'"
+    "prettier:check": "npx prettier --plugin=prettier-plugin-toml --check '**/*.{js,jsx,ts,tsx,json,css,scss,yaml,toml,md}'"
+  },
+  "devDependencies": {
+    "prettier": "3.3.3",
+    "prettier-plugin-toml": "2.0.1"
   }
 }
