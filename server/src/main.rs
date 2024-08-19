@@ -3,8 +3,10 @@ use axum::Router;
 use fileserv::file_and_error_handler;
 use leptos::get_configuration;
 use leptos_axum::{generate_route_list, LeptosRoutes};
+use shutdown::shutdown_signal;
 
 pub mod fileserv;
+mod shutdown;
 
 #[tokio::main]
 async fn main() {
@@ -30,7 +32,8 @@ async fn main() {
     // `axum::Server` is a re-export of `hyper::Server`
     log::info!("listening on http://{}", &addr);
     let listener = tokio::net::TcpListener::bind(addr).await.unwrap();
-    axum::serve(listener, app.into_make_service())
+    axum::serve(listener, app)
+        .with_graceful_shutdown(shutdown_signal())
         .await
         .unwrap();
 }
