@@ -2,5 +2,8 @@
   "name": "leptos-template",
   "workspaces": [
     "end2end"
-  ]
+  ],
+  "scripts": {
+    "prettier:check": "npx prettier --check '**/*.{js,jsx,ts,tsx,json,css,scss,yaml,md}'"
+  }
 }
