@@ -8,7 +8,7 @@ use leptos_axum::{generate_route_list, LeptosRoutes};
 use shutdown::shutdown_signal;
 use thiserror::Error;
 
-pub mod fileserv;
+mod fileserv;
 mod shutdown;
 
 #[derive(Debug, Error)]
