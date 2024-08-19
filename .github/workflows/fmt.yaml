@@ -49,4 +49,4 @@ jobs:
       - name: Install leptosfmt
         run: cargo install leptosfmt
       - name: Check code formatting with leptosfmt
-        run: leptosfmt --check
+        run: leptosfmt --check .
