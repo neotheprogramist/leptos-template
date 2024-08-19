@@ -13,11 +13,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "22"
-
+      - name: Install npm dependencies
+        run: npm install
       - name: Run Prettier
         run: npm run prettier:check
