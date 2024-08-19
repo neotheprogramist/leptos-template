@@ -6,12 +6,18 @@ edition.workspace = true
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-app = { workspace = true, features = [ "ssr" ] }
+app = { workspace = true, features = ["ssr"] }
 axum.workspace = true
-leptos = { workspace = true, features = [ "ssr" ]}
+cfg-if.workspace = true
+leptos = { workspace = true, features = ["ssr"] }
 leptos_axum.workspace = true
-log.workspace = true
-simple_logger.workspace = true
-tokio.workspace = true
-tower-http.workspace = true
-tower.workspace = true
+surrealdb = { workspace = true, features = ["kv-mem"] }
+tokio = { workspace = true, features = ["full"] }
+tower = { workspace = true, features = ["full"] }
+tower-http = { workspace = true, features = ["full"] }
+tracing-subscriber.workspace = true
+tracing.workspace = true
+thiserror.workspace = true
+
+[features]
+prod = ["app/prod"]

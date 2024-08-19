@@ -4,6 +4,7 @@ use leptos::{component, create_signal, view, Errors, IntoView, SignalUpdate};
 use leptos_meta::{provide_meta_context, Stylesheet, Title};
 use leptos_router::{Route, Router, Routes};
 
+pub mod envs;
 pub mod error_template;
 
 #[component]
