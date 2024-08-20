@@ -50,20 +50,26 @@ pub fn Database() -> impl IntoView {
         />
         <button
             class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 mb-4"
-            on:click=on_click>
+            on:click=on_click
+        >
             "Add"
         </button>
         <div class="grid grid-cols-2 gap-4">
-            {
-                move || display_value.get().iter().cloned().map(|x| {
-                    view! {
-                        <div class="flex flex-col bg-gray-100 p-2 rounded">
-                            <span class="font-semibold">{"ID: "}{x.id.to_string()}</span>
-                            <span>{x.value}</span>
-                        </div>
-                    }
-                }).collect::<Vec<_>>()
-            }
+            {move || {
+                display_value
+                    .get()
+                    .iter()
+                    .cloned()
+                    .map(|x| {
+                        view! {
+                            <div class="flex flex-col bg-gray-100 p-2 rounded">
+                                <span class="font-semibold">{"ID: "}{x.id.to_string()}</span>
+                                <span>{x.value}</span>
+                            </div>
+                        }
+                    })
+                    .collect::<Vec<_>>()
+            }}
         </div>
     }
 }
