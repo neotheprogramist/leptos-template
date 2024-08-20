@@ -13,9 +13,11 @@ leptos_axum = { workspace = true, optional = true }
 leptos_meta.workspace = true
 leptos_router.workspace = true
 leptos.workspace = true
+serde = { workspace = true, features = ["derive"] }
 surrealdb = { workspace = true, features = ["kv-mem"] }
 tailwind_fuse = { workspace = true, features = ["variant"] }
 thiserror.workspace = true
+web-sys.workspace = true
 
 [features]
 hydrate = ["leptos/hydrate", "leptos_meta/hydrate", "leptos_router/hydrate"]

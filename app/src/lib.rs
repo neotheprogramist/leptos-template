@@ -4,6 +4,7 @@ use leptos::{component, create_signal, view, Errors, IntoView, SignalUpdate};
 use leptos_meta::{provide_meta_context, Stylesheet, Title};
 use leptos_router::{Route, Router, Routes};
 
+mod database;
 pub mod envs;
 pub mod error_template;
 
@@ -13,7 +14,7 @@ pub fn App() -> impl IntoView {
     provide_meta_context();
 
     view! {
-        <Stylesheet id="leptos" href="/pkg/start-axum-workspace.css" />
+        <Stylesheet id="leptos" href="/pkg/leptos-template.css" />
 
         // sets the document title
         <Title text="Welcome to Leptos" />
@@ -27,6 +28,7 @@ pub fn App() -> impl IntoView {
             <main>
                 <Routes>
                     <Route path="" view=HomePage />
+                    <Route path="database" view=database::Database />
                 </Routes>
             </main>
         </Router>
