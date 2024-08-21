@@ -17,6 +17,7 @@ serde = { workspace = true, features = ["derive"] }
 surrealdb = { workspace = true, features = ["kv-mem"] }
 tailwind_fuse = { workspace = true, features = ["variant"] }
 thiserror.workspace = true
+wasm-bindgen.workspace = true
 web-sys.workspace = true
 
 [features]

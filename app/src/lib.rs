@@ -7,6 +7,7 @@ use leptos_router::{Route, Router, Routes};
 mod database;
 pub mod envs;
 pub mod error_template;
+mod wallet;
 
 #[component]
 pub fn App() -> impl IntoView {
@@ -29,6 +30,7 @@ pub fn App() -> impl IntoView {
                 <Routes>
                     <Route path="" view=HomePage />
                     <Route path="database" view=database::Database />
+                    <Route path="wallet" view=wallet::Wallet />
                 </Routes>
             </main>
         </Router>
