@@ -29,7 +29,7 @@ export function listProviders() {
     button.onclick = async () => {
       const connection = await connectWithProvider(
         event.detail,
-        displayElement
+        displayElement,
       );
       if (connection) {
         // Save the provider and accounts globally or pass them to your functions as needed
