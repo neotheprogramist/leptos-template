@@ -9,7 +9,7 @@ edition.workspace = true
 async-stream.workspace = true
 cfg-if.workspace = true
 clap = { workspace = true, features = ["derive", "env"] }
-futures = { workspace = true, default-features = false }
+futures = { workspace = true }
 http.workspace = true
 leptos_axum = { workspace = true, optional = true }
 leptos_meta.workspace = true
